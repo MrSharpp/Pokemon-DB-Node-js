@@ -18,5 +18,9 @@
   "homepage": "https://github.com/MrSharpp/practicerepo#readme",
   "dependencies": {
     "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.23"
   }
 }
