@@ -10,7 +10,7 @@ const pool = mariadb.createPool({
 
 export const getConnection = async () => {
     if(!connection){
-       let connection = await pool.getConnection()
+       connection = await pool.getConnection()
        return connection
     }else return connection;
 }
