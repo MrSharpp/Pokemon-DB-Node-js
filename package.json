@@ -1,0 +1,22 @@
+{
+  "name": "practicerepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrSharpp/practicerepo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrSharpp/practicerepo/issues"
+  },
+  "homepage": "https://github.com/MrSharpp/practicerepo#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
