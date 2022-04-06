@@ -9,10 +9,9 @@ const pool = mariadb.createPool({
     database: 'practice'
 })
 
-export let getConnection =  () => {
+export default () => {
     return new Promise((resolve, reject) => {
         pool.getConnection().then(conn => {
-            // i am getting here : ConnectionPromise { .....
             console.log(conn)
             resolve(conn)
         }).catch(err => {
