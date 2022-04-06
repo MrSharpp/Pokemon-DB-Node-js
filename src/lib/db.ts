@@ -5,17 +5,18 @@ let connection: any;
 const pool = mariadb.createPool({
     host: 'localhost',
     user: 'root',
-    password: 'root'
+    password: 'root',
+    database: 'practice'
 })
 
-async function connectToDb(){
-    try
-    {
-        const connection = await pool.getConnection()
-        console.log(connection)
-    }catch(err){
-        console.error(err)
-    }
+export let getConnection =  () => {
+    return new Promise((resolve, reject) => {
+        pool.getConnection().then(conn => {
+            // i am getting here : ConnectionPromise { .....
+            console.log(conn)
+            resolve(conn)
+        }).catch(err => {
+            reject(err)
+        })
+    })
 }
-
-connectToDb()

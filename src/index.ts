@@ -2,7 +2,12 @@ import  express from 'express';
 import { getConnection } from './lib/db';
 
 const app  = express();
-let connection = getConnection()
+let connection: any;
+getConnection().then(conn => {
+    connection = conn
+}).catch(err  => {
+    throw new Error(err)
+})
 
 app.get('/', (req: any, res: any) => {
     console.log(connection)
