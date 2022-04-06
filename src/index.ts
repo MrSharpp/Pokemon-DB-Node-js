@@ -9,7 +9,8 @@ getConnection().then(conn => {
     throw new Error(err)
 })
 
-app.get('/', async (req: any, res: any) => {
+app.get('/', async (req: express.Request, res: express.Response) => {
+    console.log(typeof res)
     var query = "select * from example";
     var rows = await connection.query(query);
     res.status(200).send(rows)
