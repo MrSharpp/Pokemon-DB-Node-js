@@ -1,6 +1,6 @@
 import  express from 'express';
 import getConnection  from './lib/db';
-import path from 'path';
+import {setRenderer} from './lib/renderer'
 
 const app  = express();
 let connection: any;
@@ -10,10 +10,14 @@ getConnection().then(conn => {
     throw new Error(err)
 })
 
+setRenderer(app)
+
+app.set('view engine', 'edge')
+
 app.use('/public',express.static( __dirname + "/public"))
 
 app.get('/', async (req: express.Request, res: express.Response) => {
-    res.sendFile( path.join(__dirname, '/views/index.html'))
+    res.render('index')
 })
 
 app.listen(3000, () => console.log("App Started Listening to 3000"))

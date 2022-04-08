@@ -21,6 +21,8 @@
   "homepage": "https://github.com/MrSharpp/practicerepo#readme",
   "dependencies": {
     "@craco/craco": "^5.9.0",
+    "edge": "^7.10.1",
+    "edge.js": "^5.3.4",
     "express": "^4.17.3",
     "mariadb": "^3.0.0",
     "mysql": "^2.18.1",
