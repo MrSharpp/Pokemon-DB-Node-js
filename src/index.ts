@@ -1,5 +1,6 @@
 import  express from 'express';
 import getConnection  from './lib/db';
+import path from 'path';
 
 const app  = express();
 let connection: any;
@@ -9,11 +10,10 @@ getConnection().then(conn => {
     throw new Error(err)
 })
 
+app.use('/public',express.static( __dirname + "/public"))
+
 app.get('/', async (req: express.Request, res: express.Response) => {
-    console.log(typeof res)
-    var query = "select * from example";
-    var rows = await connection.query(query);
-    res.status(200).send(rows)
+    res.sendFile( path.join(__dirname, '/views/index.html'))
 })
 
 app.listen(3000, () => console.log("App Started Listening to 3000"))
