@@ -1,8 +1,67 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="public/style.css">
-    </head>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="public/style.css" rel="stylesheet">
+</head>
     <body>
-        <h1>Hello world</h1>
+        <!-- Design By Joker Banny -->
+<div class="bg-gray-700">
+    <div>
+      <!-- Navbar Component -->
+      <nav class="w-full bg-indigo-500 flex justify-between px-6 py-4 shadow-md">
+        <div class="flex space-x-2 items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          <h1 class="text-xl font-bold text-white cursor-pointer">Pokemon</h1>
+        </div>
+        <div class="flex space-x-10 items-center">
+          <p class="text-lg cursor-pointer font-semibold text-white">Hom</p>
+          <p class="text-lg cursor-pointer font-semibold text-white">About</p>
+        </div>
+      </nav>
+      <!-- Main Component -->
+      <main class="mt-16 h-screen">
+        <!-- Search component -->
+        <div class="flex items-center max-w-xl mx-auto">
+          <input type="text" placeholder="Shear" class="w-full text-lg px-4 py-4 rounded-md rounded-r-none outline-none" />
+          <div class="flex space-x-1">
+            <button class="bg-indigo-500 hover:bg-indigo-600 transition duration-100 text-xl py-4 px-8 rounded-md rounded-l-none text-white font-semibold">Go</button>
+          </div>
+          <button class="text-xl py-4 px-6 ml-4 rounded-md font-semibold hover:bg-gray-50 transition duration-100 bg-white text-gray-700">Clear</button>
+        </div>
+        <div class="flex flex-wrap space-x-4 justify-center">
+          <!-- User Results -->
+          <div class="flex p-5 mt-8 space-x-4 items-center shadow-xl max-w-sm rounded-md">
+            <div class="container w-80 mx-auto  bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 duration-500">
+                <img class="w-full" src="https://i.imgur.com/iObhoAx.png" alt="" />
+                <div class="text-center relative py-14">
+                  <span class="absolute transform -top-10 left-28 flex z-50 text-green-500 bg-white rounded-full hover:text-green-400 transition-all duration-200 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                  <h1 class="mb-1 text-2xl font-sans font-semibold text-gray-700 hover:text-gray-900 cursor-pointer">Pokemon New</h1>
+                  <span class="text-lg text-gray-700 hover:text-gray-900">Giig</span>
+                </div>
+              </div>
+          </div>
+          
+        </div>
+      </main>
+      <!-- Footer Component -->
+      <footer class="bg-gray-800 items-center py-8">
+        <div class="text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 mx-auto text-indigo-600" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M9.243 3.03a1 1 0 01.727 1.213L9.53 6h2.94l.56-2.243a1 1 0 111.94.486L14.53 6H17a1 1 0 110 2h-2.97l-1 4H15a1 1 0 110 2h-2.47l-.56 2.242a1 1 0 11-1.94-.485L10.47 14H7.53l-.56 2.242a1 1 0 11-1.94-.485L5.47 14H3a1 1 0 110-2h2.97l1-4H5a1 1 0 110-2h2.47l.56-2.243a1 1 0 011.213-.727zM9.03 8l-1 4h2.938l1-4H9.031z" clip-rule="evenodd" />
+          </svg>
+          <p class="text-white text-md">Copyright © 2021 All rights reserved</p>
+        </div>
+      </footer>
+    </div>
+  </div>
     </body>
 </html>
