@@ -7,5 +7,5 @@ A relational Pokémon database made with node js, mariadb
 
 1. Clone Repo
 2. npm i 
-3. cd to src
-4. ts-node index.ts
+3. npm run migrate
+4. npm start
