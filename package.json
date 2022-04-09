@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ts-node src/index.ts",
     "build": "carco build",
-    "tailwind:css": "postcss src/public/index.css -o src/public/style.css"
+    "tailwind:css": "postcss src/public/index.css -o src/public/style.css",
+    "migrate": "npx sequelize-cli db:migrate --env=development",
+    "migrate:undo": "npx sequelize-cli db:migrate:undo --env=development"
   },
   "repository": {
     "type": "git",
@@ -21,13 +23,17 @@
   "homepage": "https://github.com/MrSharpp/practicerepo#readme",
   "dependencies": {
     "@craco/craco": "^5.9.0",
+    "dotenv": "^16.0.0",
     "edge": "^7.10.1",
     "edge.js": "^5.3.4",
     "express": "^4.17.3",
+    "express-session": "^1.17.2",
     "mariadb": "^3.0.0",
     "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
     "PostCSS": "npm:postcss@^7.0.39",
-    "postcss-cli": "^9.1.0"
+    "postcss-cli": "^9.1.0",
+    "sequelize": "^6.18.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
@@ -35,6 +41,7 @@
     "@types/node": "^17.0.23",
     "autoprefixer": "^9.8.8",
     "postcss": "^8.4.12",
+    "sequelize-cli": "^6.4.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
   }
 }
