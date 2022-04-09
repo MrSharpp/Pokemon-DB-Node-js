@@ -1,4 +1,5 @@
 import  express from 'express';
+import { join } from "path";
 import getConnection  from './lib/db';
 import {setRenderer} from './lib/renderer'
 
@@ -13,6 +14,7 @@ getConnection().then(conn => {
 setRenderer(app)
 
 app.set('view engine', 'edge')
+app.set('views', join(__dirname , "views"))
 
 app.use('/public',express.static( __dirname + "/public"))
 

@@ -3,7 +3,7 @@ import { Edge } from "edge.js";
 import fs from 'fs';
 
 const edge = new Edge({cache: false})
-edge.mount(join(__dirname, 'views'))
+console.log("__DIRNAME:" + __dirname)
 
 export let setRenderer = (app: any) => {
     app.engine('edge', async (filepath: string, options: any, callback: Function) => {
